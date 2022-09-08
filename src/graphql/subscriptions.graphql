@@ -1,0 +1,400 @@
+# this is an auto generated file. This will be overwritten
+subscription OnCreateHotel($filter: ModelSubscriptionHotelFilterInput) {
+  onCreateHotel(filter: $filter) {
+    id
+    name
+    address
+    image
+    rooms {
+      items {
+        id
+        title
+        createdAt
+        updatedAt
+        hotelRoomsId
+      }
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateHotel($filter: ModelSubscriptionHotelFilterInput) {
+  onUpdateHotel(filter: $filter) {
+    id
+    name
+    address
+    image
+    rooms {
+      items {
+        id
+        title
+        createdAt
+        updatedAt
+        hotelRoomsId
+      }
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteHotel($filter: ModelSubscriptionHotelFilterInput) {
+  onDeleteHotel(filter: $filter) {
+    id
+    name
+    address
+    image
+    rooms {
+      items {
+        id
+        title
+        createdAt
+        updatedAt
+        hotelRoomsId
+      }
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateRoom($filter: ModelSubscriptionRoomFilterInput) {
+  onCreateRoom(filter: $filter) {
+    id
+    title
+    Hotel {
+      id
+      name
+      address
+      image
+      rooms {
+        nextToken
+      }
+      createdAt
+      updatedAt
+    }
+    DayBooked {
+      items {
+        id
+        in
+        out
+        content
+        createdAt
+        updatedAt
+        roomDayBookedId
+        dayBookedPersonId
+      }
+      nextToken
+    }
+    createdAt
+    updatedAt
+    hotelRoomsId
+  }
+}
+subscription OnUpdateRoom($filter: ModelSubscriptionRoomFilterInput) {
+  onUpdateRoom(filter: $filter) {
+    id
+    title
+    Hotel {
+      id
+      name
+      address
+      image
+      rooms {
+        nextToken
+      }
+      createdAt
+      updatedAt
+    }
+    DayBooked {
+      items {
+        id
+        in
+        out
+        content
+        createdAt
+        updatedAt
+        roomDayBookedId
+        dayBookedPersonId
+      }
+      nextToken
+    }
+    createdAt
+    updatedAt
+    hotelRoomsId
+  }
+}
+subscription OnDeleteRoom($filter: ModelSubscriptionRoomFilterInput) {
+  onDeleteRoom(filter: $filter) {
+    id
+    title
+    Hotel {
+      id
+      name
+      address
+      image
+      rooms {
+        nextToken
+      }
+      createdAt
+      updatedAt
+    }
+    DayBooked {
+      items {
+        id
+        in
+        out
+        content
+        createdAt
+        updatedAt
+        roomDayBookedId
+        dayBookedPersonId
+      }
+      nextToken
+    }
+    createdAt
+    updatedAt
+    hotelRoomsId
+  }
+}
+subscription OnCreateDayBooked($filter: ModelSubscriptionDayBookedFilterInput) {
+  onCreateDayBooked(filter: $filter) {
+    id
+    in
+    out
+    Room {
+      id
+      title
+      Hotel {
+        id
+        name
+        address
+        image
+        createdAt
+        updatedAt
+      }
+      DayBooked {
+        nextToken
+      }
+      createdAt
+      updatedAt
+      hotelRoomsId
+    }
+    content
+    Person {
+      id
+      name
+      DayBooked {
+        id
+        in
+        out
+        content
+        createdAt
+        updatedAt
+        roomDayBookedId
+        dayBookedPersonId
+      }
+      createdAt
+      updatedAt
+      personDayBookedId
+    }
+    createdAt
+    updatedAt
+    roomDayBookedId
+    dayBookedPersonId
+  }
+}
+subscription OnUpdateDayBooked($filter: ModelSubscriptionDayBookedFilterInput) {
+  onUpdateDayBooked(filter: $filter) {
+    id
+    in
+    out
+    Room {
+      id
+      title
+      Hotel {
+        id
+        name
+        address
+        image
+        createdAt
+        updatedAt
+      }
+      DayBooked {
+        nextToken
+      }
+      createdAt
+      updatedAt
+      hotelRoomsId
+    }
+    content
+    Person {
+      id
+      name
+      DayBooked {
+        id
+        in
+        out
+        content
+        createdAt
+        updatedAt
+        roomDayBookedId
+        dayBookedPersonId
+      }
+      createdAt
+      updatedAt
+      personDayBookedId
+    }
+    createdAt
+    updatedAt
+    roomDayBookedId
+    dayBookedPersonId
+  }
+}
+subscription OnDeleteDayBooked($filter: ModelSubscriptionDayBookedFilterInput) {
+  onDeleteDayBooked(filter: $filter) {
+    id
+    in
+    out
+    Room {
+      id
+      title
+      Hotel {
+        id
+        name
+        address
+        image
+        createdAt
+        updatedAt
+      }
+      DayBooked {
+        nextToken
+      }
+      createdAt
+      updatedAt
+      hotelRoomsId
+    }
+    content
+    Person {
+      id
+      name
+      DayBooked {
+        id
+        in
+        out
+        content
+        createdAt
+        updatedAt
+        roomDayBookedId
+        dayBookedPersonId
+      }
+      createdAt
+      updatedAt
+      personDayBookedId
+    }
+    createdAt
+    updatedAt
+    roomDayBookedId
+    dayBookedPersonId
+  }
+}
+subscription OnCreatePerson($filter: ModelSubscriptionPersonFilterInput) {
+  onCreatePerson(filter: $filter) {
+    id
+    name
+    DayBooked {
+      id
+      in
+      out
+      Room {
+        id
+        title
+        createdAt
+        updatedAt
+        hotelRoomsId
+      }
+      content
+      Person {
+        id
+        name
+        createdAt
+        updatedAt
+        personDayBookedId
+      }
+      createdAt
+      updatedAt
+      roomDayBookedId
+      dayBookedPersonId
+    }
+    createdAt
+    updatedAt
+    personDayBookedId
+  }
+}
+subscription OnUpdatePerson($filter: ModelSubscriptionPersonFilterInput) {
+  onUpdatePerson(filter: $filter) {
+    id
+    name
+    DayBooked {
+      id
+      in
+      out
+      Room {
+        id
+        title
+        createdAt
+        updatedAt
+        hotelRoomsId
+      }
+      content
+      Person {
+        id
+        name
+        createdAt
+        updatedAt
+        personDayBookedId
+      }
+      createdAt
+      updatedAt
+      roomDayBookedId
+      dayBookedPersonId
+    }
+    createdAt
+    updatedAt
+    personDayBookedId
+  }
+}
+subscription OnDeletePerson($filter: ModelSubscriptionPersonFilterInput) {
+  onDeletePerson(filter: $filter) {
+    id
+    name
+    DayBooked {
+      id
+      in
+      out
+      Room {
+        id
+        title
+        createdAt
+        updatedAt
+        hotelRoomsId
+      }
+      content
+      Person {
+        id
+        name
+        createdAt
+        updatedAt
+        personDayBookedId
+      }
+      createdAt
+      updatedAt
+      roomDayBookedId
+      dayBookedPersonId
+    }
+    createdAt
+    updatedAt
+    personDayBookedId
+  }
+}

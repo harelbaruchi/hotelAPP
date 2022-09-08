@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-hoteladminapp-dev-202840-authRole",
+      "UnauthRoleArn": "arn:aws:iam::628100866298:role/amplify-hoteladminapp-dev-202840-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::628100866298:role/amplify-hoteladminapp-dev-202840-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-hoteladminapp-dev-202840-deployment",
+      "UnauthRoleName": "amplify-hoteladminapp-dev-202840-unauthRole",
+      "StackName": "amplify-hoteladminapp-dev-202840",
+      "StackId": "arn:aws:cloudformation:us-east-2:628100866298:stack/amplify-hoteladminapp-dev-202840/06226080-2c77-11ed-b656-064fe35fbe20",
+      "AmplifyAppId": "d1y2r25sdqg956"
+    },
+    "categories": {
+      "auth": {
+        "hoteladminapp505de284": {}
+      }
+    }
+  }
+}

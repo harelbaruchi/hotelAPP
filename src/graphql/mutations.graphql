@@ -1,0 +1,436 @@
+# this is an auto generated file. This will be overwritten
+mutation CreateHotel(
+  $input: CreateHotelInput!
+  $condition: ModelHotelConditionInput
+) {
+  createHotel(input: $input, condition: $condition) {
+    id
+    name
+    address
+    image
+    rooms {
+      items {
+        id
+        title
+        createdAt
+        updatedAt
+        hotelRoomsId
+      }
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateHotel(
+  $input: UpdateHotelInput!
+  $condition: ModelHotelConditionInput
+) {
+  updateHotel(input: $input, condition: $condition) {
+    id
+    name
+    address
+    image
+    rooms {
+      items {
+        id
+        title
+        createdAt
+        updatedAt
+        hotelRoomsId
+      }
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteHotel(
+  $input: DeleteHotelInput!
+  $condition: ModelHotelConditionInput
+) {
+  deleteHotel(input: $input, condition: $condition) {
+    id
+    name
+    address
+    image
+    rooms {
+      items {
+        id
+        title
+        createdAt
+        updatedAt
+        hotelRoomsId
+      }
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateRoom(
+  $input: CreateRoomInput!
+  $condition: ModelRoomConditionInput
+) {
+  createRoom(input: $input, condition: $condition) {
+    id
+    title
+    Hotel {
+      id
+      name
+      address
+      image
+      rooms {
+        nextToken
+      }
+      createdAt
+      updatedAt
+    }
+    DayBooked {
+      items {
+        id
+        in
+        out
+        content
+        createdAt
+        updatedAt
+        roomDayBookedId
+        dayBookedPersonId
+      }
+      nextToken
+    }
+    createdAt
+    updatedAt
+    hotelRoomsId
+  }
+}
+mutation UpdateRoom(
+  $input: UpdateRoomInput!
+  $condition: ModelRoomConditionInput
+) {
+  updateRoom(input: $input, condition: $condition) {
+    id
+    title
+    Hotel {
+      id
+      name
+      address
+      image
+      rooms {
+        nextToken
+      }
+      createdAt
+      updatedAt
+    }
+    DayBooked {
+      items {
+        id
+        in
+        out
+        content
+        createdAt
+        updatedAt
+        roomDayBookedId
+        dayBookedPersonId
+      }
+      nextToken
+    }
+    createdAt
+    updatedAt
+    hotelRoomsId
+  }
+}
+mutation DeleteRoom(
+  $input: DeleteRoomInput!
+  $condition: ModelRoomConditionInput
+) {
+  deleteRoom(input: $input, condition: $condition) {
+    id
+    title
+    Hotel {
+      id
+      name
+      address
+      image
+      rooms {
+        nextToken
+      }
+      createdAt
+      updatedAt
+    }
+    DayBooked {
+      items {
+        id
+        in
+        out
+        content
+        createdAt
+        updatedAt
+        roomDayBookedId
+        dayBookedPersonId
+      }
+      nextToken
+    }
+    createdAt
+    updatedAt
+    hotelRoomsId
+  }
+}
+mutation CreateDayBooked(
+  $input: CreateDayBookedInput!
+  $condition: ModelDayBookedConditionInput
+) {
+  createDayBooked(input: $input, condition: $condition) {
+    id
+    in
+    out
+    Room {
+      id
+      title
+      Hotel {
+        id
+        name
+        address
+        image
+        createdAt
+        updatedAt
+      }
+      DayBooked {
+        nextToken
+      }
+      createdAt
+      updatedAt
+      hotelRoomsId
+    }
+    content
+    Person {
+      id
+      name
+      DayBooked {
+        id
+        in
+        out
+        content
+        createdAt
+        updatedAt
+        roomDayBookedId
+        dayBookedPersonId
+      }
+      createdAt
+      updatedAt
+      personDayBookedId
+    }
+    createdAt
+    updatedAt
+    roomDayBookedId
+    dayBookedPersonId
+  }
+}
+mutation UpdateDayBooked(
+  $input: UpdateDayBookedInput!
+  $condition: ModelDayBookedConditionInput
+) {
+  updateDayBooked(input: $input, condition: $condition) {
+    id
+    in
+    out
+    Room {
+      id
+      title
+      Hotel {
+        id
+        name
+        address
+        image
+        createdAt
+        updatedAt
+      }
+      DayBooked {
+        nextToken
+      }
+      createdAt
+      updatedAt
+      hotelRoomsId
+    }
+    content
+    Person {
+      id
+      name
+      DayBooked {
+        id
+        in
+        out
+        content
+        createdAt
+        updatedAt
+        roomDayBookedId
+        dayBookedPersonId
+      }
+      createdAt
+      updatedAt
+      personDayBookedId
+    }
+    createdAt
+    updatedAt
+    roomDayBookedId
+    dayBookedPersonId
+  }
+}
+mutation DeleteDayBooked(
+  $input: DeleteDayBookedInput!
+  $condition: ModelDayBookedConditionInput
+) {
+  deleteDayBooked(input: $input, condition: $condition) {
+    id
+    in
+    out
+    Room {
+      id
+      title
+      Hotel {
+        id
+        name
+        address
+        image
+        createdAt
+        updatedAt
+      }
+      DayBooked {
+        nextToken
+      }
+      createdAt
+      updatedAt
+      hotelRoomsId
+    }
+    content
+    Person {
+      id
+      name
+      DayBooked {
+        id
+        in
+        out
+        content
+        createdAt
+        updatedAt
+        roomDayBookedId
+        dayBookedPersonId
+      }
+      createdAt
+      updatedAt
+      personDayBookedId
+    }
+    createdAt
+    updatedAt
+    roomDayBookedId
+    dayBookedPersonId
+  }
+}
+mutation CreatePerson(
+  $input: CreatePersonInput!
+  $condition: ModelPersonConditionInput
+) {
+  createPerson(input: $input, condition: $condition) {
+    id
+    name
+    DayBooked {
+      id
+      in
+      out
+      Room {
+        id
+        title
+        createdAt
+        updatedAt
+        hotelRoomsId
+      }
+      content
+      Person {
+        id
+        name
+        createdAt
+        updatedAt
+        personDayBookedId
+      }
+      createdAt
+      updatedAt
+      roomDayBookedId
+      dayBookedPersonId
+    }
+    createdAt
+    updatedAt
+    personDayBookedId
+  }
+}
+mutation UpdatePerson(
+  $input: UpdatePersonInput!
+  $condition: ModelPersonConditionInput
+) {
+  updatePerson(input: $input, condition: $condition) {
+    id
+    name
+    DayBooked {
+      id
+      in
+      out
+      Room {
+        id
+        title
+        createdAt
+        updatedAt
+        hotelRoomsId
+      }
+      content
+      Person {
+        id
+        name
+        createdAt
+        updatedAt
+        personDayBookedId
+      }
+      createdAt
+      updatedAt
+      roomDayBookedId
+      dayBookedPersonId
+    }
+    createdAt
+    updatedAt
+    personDayBookedId
+  }
+}
+mutation DeletePerson(
+  $input: DeletePersonInput!
+  $condition: ModelPersonConditionInput
+) {
+  deletePerson(input: $input, condition: $condition) {
+    id
+    name
+    DayBooked {
+      id
+      in
+      out
+      Room {
+        id
+        title
+        createdAt
+        updatedAt
+        hotelRoomsId
+      }
+      content
+      Person {
+        id
+        name
+        createdAt
+        updatedAt
+        personDayBookedId
+      }
+      createdAt
+      updatedAt
+      roomDayBookedId
+      dayBookedPersonId
+    }
+    createdAt
+    updatedAt
+    personDayBookedId
+  }
+}

@@ -1,0 +1,240 @@
+# this is an auto generated file. This will be overwritten
+query GetHotel($id: ID!) {
+  getHotel(id: $id) {
+    id
+    name
+    address
+    image
+    rooms {
+      items {
+        id
+        title
+        createdAt
+        updatedAt
+        hotelRoomsId
+      }
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+query ListHotels(
+  $filter: ModelHotelFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listHotels(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      name
+      address
+      image
+      rooms {
+        nextToken
+      }
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetRoom($id: ID!) {
+  getRoom(id: $id) {
+    id
+    title
+    Hotel {
+      id
+      name
+      address
+      image
+      rooms {
+        nextToken
+      }
+      createdAt
+      updatedAt
+    }
+    DayBooked {
+      items {
+        id
+        in
+        out
+        content
+        createdAt
+        updatedAt
+        roomDayBookedId
+        dayBookedPersonId
+      }
+      nextToken
+    }
+    createdAt
+    updatedAt
+    hotelRoomsId
+  }
+}
+query ListRooms(
+  $filter: ModelRoomFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listRooms(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      title
+      Hotel {
+        id
+        name
+        address
+        image
+        createdAt
+        updatedAt
+      }
+      DayBooked {
+        nextToken
+      }
+      createdAt
+      updatedAt
+      hotelRoomsId
+    }
+    nextToken
+  }
+}
+query GetDayBooked($id: ID!) {
+  getDayBooked(id: $id) {
+    id
+    in
+    out
+    Room {
+      id
+      title
+      Hotel {
+        id
+        name
+        address
+        image
+        createdAt
+        updatedAt
+      }
+      DayBooked {
+        nextToken
+      }
+      createdAt
+      updatedAt
+      hotelRoomsId
+    }
+    content
+    Person {
+      id
+      name
+      DayBooked {
+        id
+        in
+        out
+        content
+        createdAt
+        updatedAt
+        roomDayBookedId
+        dayBookedPersonId
+      }
+      createdAt
+      updatedAt
+      personDayBookedId
+    }
+    createdAt
+    updatedAt
+    roomDayBookedId
+    dayBookedPersonId
+  }
+}
+query ListDayBookeds(
+  $filter: ModelDayBookedFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listDayBookeds(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      in
+      out
+      Room {
+        id
+        title
+        createdAt
+        updatedAt
+        hotelRoomsId
+      }
+      content
+      Person {
+        id
+        name
+        createdAt
+        updatedAt
+        personDayBookedId
+      }
+      createdAt
+      updatedAt
+      roomDayBookedId
+      dayBookedPersonId
+    }
+    nextToken
+  }
+}
+query GetPerson($id: ID!) {
+  getPerson(id: $id) {
+    id
+    name
+    DayBooked {
+      id
+      in
+      out
+      Room {
+        id
+        title
+        createdAt
+        updatedAt
+        hotelRoomsId
+      }
+      content
+      Person {
+        id
+        name
+        createdAt
+        updatedAt
+        personDayBookedId
+      }
+      createdAt
+      updatedAt
+      roomDayBookedId
+      dayBookedPersonId
+    }
+    createdAt
+    updatedAt
+    personDayBookedId
+  }
+}
+query ListPeople(
+  $filter: ModelPersonFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listPeople(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      name
+      DayBooked {
+        id
+        in
+        out
+        content
+        createdAt
+        updatedAt
+        roomDayBookedId
+        dayBookedPersonId
+      }
+      createdAt
+      updatedAt
+      personDayBookedId
+    }
+    nextToken
+  }
+}
